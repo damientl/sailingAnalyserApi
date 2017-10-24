@@ -1,11 +1,16 @@
 package org.sailinganalyser.util;
 
 import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import org.sailinganalyser.model.Segment;
+
+import java.util.List;
 
 public class XMLReaderTest {
     @Test
     public void readTest(){
-        XmlReader.readXML("./src/test/resources/example.gpx");
+        List<Segment> segments = XmlReader.readXML("./src/test/resources/example.gpx");
+        assertTrue(segments.size() > 0);
 
     }
 }
