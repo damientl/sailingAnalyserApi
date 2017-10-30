@@ -2,6 +2,8 @@ package org.sailinganalyser.util;
 
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.DocumentBuilder;
+
+import org.sailinganalyser.model.SegmentDTO;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 import org.w3c.dom.Node;
@@ -13,7 +15,7 @@ import java.util.List;
 import org.sailinganalyser.model.Segment;
 
 public class XmlReader {
-    public static List<Segment> readXML(String filePath){
+    public static SegmentDTO readXML(String filePath){
         List<Segment> segments = new ArrayList<Segment>();
         try {
 
@@ -45,6 +47,6 @@ public class XmlReader {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return segments;
+        return new SegmentDTO(segments);
     }
 }

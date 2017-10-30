@@ -9,7 +9,7 @@ import java.util.List;
 public class XMLReaderTest {
     @Test
     public void readTest(){
-        List<Segment> segments = XmlReader.readXML("./src/test/resources/example.gpx");
+        List<Segment> segments = XmlReader.readXML("./src/test/resources/example.gpx").segments;
         assertTrue(segments.size() > 0);
 
     }
