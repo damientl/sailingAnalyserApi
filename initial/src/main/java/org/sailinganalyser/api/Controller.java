@@ -21,7 +21,7 @@ public class Controller {
     @CrossOrigin(origins = "http://localhost:4200")
     @RequestMapping("/segments")
     public SegmentDTO segments() {
-        return XmlReader.readXML("../src/test/resources/example.gpx");
+        return XmlReader.readXML("src/test/resources/example.gpx");
     }
     
 }
